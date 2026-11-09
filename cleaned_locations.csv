@@ -1,0 +1,217 @@
+site_id,facility_name,NAME,STREETNAME,HOUSENUM,CITY,ZIP,SYSTEM,BOROCODE,X,Y
+NYCLIB1,115th Street,115th Street,West 115th Street,203,New York,10026,NYPL,1,997115.1297699999,231827.652864
+NYCLIB2,125th Street,125th Street,East 125th Street,224,New York,10035,NYPL,1,1002287.6039999999,231844.89495599997
+NYCLIB3,53rd Street,53rd Street,West 53rd Street,18,New York,10019,NYPL,1,990521,216460
+NYCLIB4,58th Street,58th Street,East 58th Street,127,New York,10022,NYPL,1,992731.9469350001,216963.13174
+NYCLIB5,67th Street,67th Street,East 67th Street,328,New York,10065,NYPL,1,995455.102906,217958.496876
+NYCLIB6,96th Street,96th Street,East 96th Street,112,New York,10128,NYPL,1,997596.132088,225626.905751
+NYCLIB7,Aguilar,Aguilar,East 110th Street,174,New York,10029,NYPL,1,999905.7780149999,228635.85559099997
+NYCLIB8,Allerton,Allerton,Barnes Avenue,2740,Bronx,10467,NYPL,2,1022080.8747899999,255107.42421799997
+NYCLIB9,Andrew Heiskell Braille and Talking Book,Andrew Heiskell Braille and Talking Book,West 20th Street,40,New York,10011,NYPL,1,986090.883117,209048.21712400005
+NYCLIB10,Battery Park City Library,Battery Park City Library,North End Avenue,175,New York,10282,NYPL,1,979884.2118060001,200022.388889
+NYCLIB11,Baychester,Baychester,Asch Loop North,2049,Bronx,10475,NYPL,2,1031456.1666700001,256562.611111
+NYCLIB12,Belmont Library and Enrico Fermi Cultural Center,Belmont Library and Enrico Fermi Cultural Center,East 186th Street,610,Bronx,10458,NYPL,2,1015266,250558
+NYCLIB13,Bloomingdale,Bloomingdale,West 100th Street,150,New York,10025,NYPL,1,993219.1041669999,229236.8125
+NYCLIB14,Bronx Library Center,Bronx Library Center,East Kingsbridge Road,310,Bronx,10458,NYPL,2,1013430.8067800001,253702.29284200002
+NYCLIB15,Castle Hill,Castle Hill,Castle Hill Avenue,947,Bronx,10473,NYPL,2,1025716,240476
+NYCLIB16,Chatham Square,Chatham Square,East Broadway,33,New York,10002,NYPL,1,985223.0981079999,199162.99673699998
+NYCLIB17,City Island,City Island,City Island Avenue,320,Bronx,10464,NYPL,2,1043355.15999,248186.534188
+NYCLIB18,Clason's Point,Clason's Point,Morrison Avenue,1215,Bronx,10472,NYPL,2,1018836.80778,241690.718112
+NYCLIB19,Columbus,Columbus,10th Avenue,742,New York,10019,NYPL,1,986681.9278670001,217963.17698400002
+NYCLIB20,Countee Cullen,Countee Cullen,West 136th Street,104,New York,10030,NYPL,1,1000536.8437500001,236149.25
+NYCLIB21,Dongan Hills,Dongan Hills,Richmond Road,1617,Staten Island,10304,NYPL,5,956160.4688970002,154388.11515800003
+NYCLIB22,Eastchester,Eastchester,East Gun Hill Road,1385,Bronx,10469,NYPL,2,1027101.04421,256330.95589199997
+NYCLIB23,Edenwald,Edenwald,East 233rd Street,1255,Bronx,10466,NYPL,2,1028257.74202,263166.30606599996
+NYCLIB24,Epiphany,Epiphany,East 23rd Street,228,New York,10010,NYPL,1,989224.655065,208182.154224
+NYCLIB25,Fort Washington,Fort Washington,West 179th Street,535,New York,10033,NYPL,1,1002547.0388500001,248186.27008100002
+NYCLIB26,Francis Martin,Francis Martin,University Avenue,2150,Bronx,10453,NYPL,2,1009335.4580200001,251672.45241299996
+NYCLIB27,George Bruce,George Bruce,West 125th Street,518,New York,10027,NYPL,1,996138,235758
+NYCLIB28,Grand Central,Grand Central,East 46th Street,135,New York,10017,NYPL,1,991573.221234,214005.050058
+NYCLIB29,Grand Concourse,Grand Concourse,East 173rd Street,155,Bronx,10457,NYPL,2,1009127.25502,246782.825054
+NYCLIB30,Great Kills,Great Kills,Giffords Lane,56,Staten Island,10308,NYPL,5,942256.9087779999,140575.415093
+NYCLIB31,Hamilton Fish Park,Hamilton Fish Park,East Houston Street,415,New York,10002,NYPL,1,989953.874634,201512.516602
+NYCLIB32,Hamilton Grange,Hamilton Grange,West 145th Street,503,New York,10031,NYPL,1,998632.449898,240096.19407
+NYCLIB33,Harlem,Harlem,West 124th Street,9,New York,10027,NYPL,1,999942.4682750001,232988.107892
+NYCLIB34,High Bridge,High Bridge,West 168th Street,78,Bronx,10452,NYPL,2,1005404,244578
+NYCLIB35,Hudson Park,Hudson Park,Leroy Street,66,New York,10014,NYPL,1,982772.4766960001,205229.07285900004
+NYCLIB36,Huguenot Park,Huguenot Park,Huguenot Avenue,830,Staten Island,10312,NYPL,5,930538,133915
+NYCLIB37,Hunts Point,Hunts Point,Southern Boulevard,877,Bronx,10459,NYPL,2,1013552.8604100001,237558.44799800002
+NYCLIB38,Inwood,Inwood,Broadway,4790,New York,10034,NYPL,1,1004755.68262,254701.930603
+NYCLIB39,Jefferson Market,Jefferson Market,Avenue of the Americas,425,New York,10011,NYPL,1,984480.221619,206923.82324199998
+NYCLIB40,Jerome Park,Jerome Park,Eames Place,118,Bronx,10468,NYPL,2,1011577.97742,255918.68939199997
+NYCLIB41,Kingsbridge,Kingsbridge,West 231st Street,291,Bronx,10463,NYPL,2,1009772,260154
+NYCLIB42,Kips Bay,Kips Bay,Third Avenue,446,New York,10016,NYPL,1,989819.139587,210267.171631
+NYCLIB43,Macomb's Bridge,Macomb's Bridge,Adam Clayton Powell Jr. Boulevard,2650,New York,10039,NYPL,1,1002000.35413,240411.62427
+NYCLIB44,Mariners Harbor,Mariners Harbor,South Ave,206,Staten Island,10303,NYPL,5,938014.8125,170556.27083300002
+NYCLIB45,Melrose,Melrose,Morris Avenue,910,Bronx,10451,NYPL,2,1007059,240435
+NYCLIB46,Mid-Manhattan,Mid-Manhattan,Fifth Avenue,455,New York,10016,NYPL,1,989320.7021169999,213211.573299
+NYCLIB47,Morningside Heights,Morningside Heights,Broadway,2900,New York,10025,NYPL,1,994001.497437,232973.99401899998
+NYCLIB48,Morris Park,Morris Park,Morris Park Avenue,985,Bronx,10462,NYPL,2,1023824.75876,248269.629823
+NYCLIB49,Morrisania,Morrisania,East 169th Street,610,Bronx,10456,NYPL,2,1011427,242144
+NYCLIB50,Mosholu,Mosholu,East 205th Street,285,Bronx,10467,NYPL,2,1017883.47176,257861.24712200003
+NYCLIB51,Mott Haven,Mott Haven,East 140th Street,321,Bronx,10454,NYPL,2,1005182.3364300001,234970.114197
+NYCLIB52,Muhlenberg,Muhlenberg,West 23rd Street,209,New York,10011,NYPL,1,985367.092407,210513.47003199998
+NYCLIB53,Mulberry Street,Mulberry Street,Jersey Street,10,New York,10012,NYPL,1,985446.2640379999,203100.03478999998
+NYCLIB54,New Amsterdam,New Amsterdam,Murray Street,9,New York,10007,NYPL,1,982068.4624020001,199251.89178499999
+NYCLIB55,New Dorp,New Dorp,New Dorp Lane,309,Staten Island,10306,NYPL,5,953146.5261060001,147666.523943
+NYCLIB56,"Library for the Performing Arts, Dorothy and Lewis B. Cullman Center","Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",Lincoln Center Plaza,40,New York,10023,NYPL,1,988530.139066,221086.633008
+NYCLIB57,Ottendorfer,Ottendorfer,Second Avenue,135,New York,10003,NYPL,1,987647.2015989999,204837.14538600002
+NYCLIB58,Parkchester,Parkchester,Westchester Avenue,1985,Bronx,10462,NYPL,2,1023447.98199,243077.88562
+NYCLIB59,Pelham Bay,Pelham Bay,Middletown Road,3060,Bronx,10461,NYPL,2,1031866.65021,246931.824829
+NYCLIB60,Pelham Parkway-Van Nest,Pelham Parkway-Van Nest,Barnes Avenue,2147,Bronx,10462,NYPL,2,1021832,250761
+NYCLIB61,Port Richmond,Port Richmond,Bennett Street,75,Staten Island,10302,NYPL,5,947863.183982,171593.23888400002
+NYCLIB62,Richmondtown,Richmondtown,Clarke Avenue,200,Staten Island,10306,NYPL,5,945760.3256550002,145709.10987900003
+NYCLIB63,Riverdale,Riverdale,Mosholu Avenue,5540,Bronx,10471,NYPL,2,1011126.92097,268543.64701699995
+NYCLIB64,Riverside,Riverside,Amsterdam Avenue,127,New York,10023,NYPL,1,988539.698792,221350.808228
+NYCLIB65,Roosevelt Island,Roosevelt Island,Main Street,524,New York,10044,NYPL,1,998044.32959,216618.26580800003
+NYCLIB66,Schomburg Center for Research in Black Culture,Schomburg Center for Research in Black Culture,Malcolm X Boulevard,515,New York,10037,NYPL,1,1000596.95203,236081.087585
+NYCLIB67,"Science, Industry and Business Library (SIBL)","Science, Industry and Business Library (SIBL)",Madison Avenue,188,New York,10016,NYPL,1,988957.81814,211835.634661
+NYCLIB68,Sedgwick,Sedgwick,Martin Luther King Jr. Boulevard,1701,Bronx,10453,NYPL,2,1007075.7638900001,248763.75
+NYCLIB69,Seward Park,Seward Park,East Broadway,192,New York,10002,NYPL,1,987437.757996,199555.38079799997
+NYCLIB70,Soundview,Soundview,Soundview Avenue,660,Bronx,10473,NYPL,2,1022200.2751399998,237584.746993
+NYCLIB71,South Beach,South Beach,Robin Road,21-25,Staten Island,10305,NYPL,5,966759.435242,156349.63720700002
+NYCLIB72,Spuyten Duyvil,Spuyten Duyvil,West 235th Street,650,Bronx,10463,NYPL,2,1007849.73462,262187.01782199997
+NYCLIB73,St. Agnes,St. Agnes,Amsterdam Avenue,444,New York,10024,NYPL,1,990494.140059,225214.103099
+NYCLIB74,St. George Library Center,St. George Library Center,Central Avenue,5,Staten Island,10301,NYPL,5,962970.0015870001,173110.49981699997
+NYCLIB75,Stapleton,Stapleton,Canal Street,132,Staten Island,10304,NYPL,5,962635.9667970001,167448.122986
+NYCLIB76,Stephen A. Schwarzman Building,Stephen A. Schwarzman Building,Fifth Avenue at 42nd Street,NA,New York,10018,NYPL,1,989173.1254270001,213689.86084
+NYCLIB77,Terence Cardinal Cooke-Cathedral,Terence Cardinal Cooke-Cathedral,Lexington Avenue,560,New York,10022,NYPL,1,991857.414795,215001.395386
+NYCLIB78,Throg's Neck,Throg's Neck,Cross Bronx Expressway Extension,3025,Bronx,10465,NYPL,2,1034319.0188000001,239123.41803
+NYCLIB79,Todt Hill-Westerleigh,Todt Hill-Westerleigh,Victory Boulevard,2550,Staten Island,10314,NYPL,5,943012.076233,161405.796814
+NYCLIB80,Tompkins Square,Tompkins Square,East 10th Street,331,New York,10009,NYPL,1,989676.7390139999,204247.802795
+NYCLIB81,Tottenville,Tottenville,Amboy Road,7430,Staten Island,10307,NYPL,5,916370.601298,125007.163094
+NYCLIB82,Tremont,Tremont,Washington Avenue,1866,Bronx,10457,NYPL,2,1012374,247531
+NYCLIB83,Van Cortlandt,Van Cortlandt,Sedgwick Avenue,3874,Bronx,10463,NYPL,2,1013582.97119,260916.07220500003
+NYCLIB84,Wakefield,Wakefield,Lowerre Place,4100,Bronx,10466,NYPL,2,1023073.81276,263955.41045900004
+NYCLIB85,Washington Heights,Washington Heights,St. Nicholas Avenue,1000,New York,10032,NYPL,1,1000933.42401,243331.70941199997
+NYCLIB86,Webster,Webster,York Avenue,1465,New York,10021,NYPL,1,997727.7161429999,220050.028126
+NYCLIB87,West Farms,West Farms,Honeywell Avenue,2085,Bronx,10460,NYPL,2,1016618.11041,247025.77362100003
+NYCLIB88,West New Brighton,West New Brighton,Castleton Avenue,976,Staten Island,10310,NYPL,5,952380.829147,170465.980968
+NYCLIB89,Westchester Square,Westchester Square,Glebe Avenue,2521,Bronx,10461,NYPL,2,1026658.83978,245665.19140599997
+NYCLIB90,Woodlawn Heights,Woodlawn Heights,Katonah Avenue,4355,Bronx,10470,NYPL,2,1020757.04476,267360.16480399994
+NYCLIB91,Woodstock,Woodstock,East 160th Street,761,Bronx,10456,NYPL,2,1010641.4422,238265.129822
+NYCLIB92,Yorkville,Yorkville,East 79th Street,222,New York,10021,NYPL,1,996333.6973879999,221143.422791
+NYCLIB93,Arlington,Arlington,Arlington Avenue,203,Brooklyn,11207,BPL,3,1015526,187290
+NYCLIB94,Bay Ridge,Bay Ridge,Ridge Boulevard,7223,Brooklyn,11209,BPL,3,976051.427146,170124.69228100003
+NYCLIB95,Bedford,Bedford,Franklin Avenue,496,Brooklyn,11238,BPL,3,996408,187682
+NYCLIB96,Borough Park,Borough Park,43rd Street,1265,Brooklyn,11219,BPL,3,987302,172041
+NYCLIB97,Brighton Beach <br> (Closed for Renovation),Brighton Beach <br> (Closed for Renovation),Brighton First Road,16,Brooklyn,11235,BPL,3,993479.809941,149169.78077900002
+NYCLIB98,Brooklyn Heights,Brooklyn Heights,Cadman Plaza West,280,Brooklyn,11201,BPL,3,986649.1923679998,192732.48433599996
+NYCLIB99,Brower Park,Brower Park,St. Marks Avenue,725,Brooklyn,11216,BPL,3,998516.892058,185336.410217
+NYCLIB100,Brownsville,Brownsville,Glenmore Avenue,61,Brooklyn,11212,BPL,3,1009603.33478,183944.897908
+NYCLIB101,Bushwick,Bushwick,Bushwick Avenue,340,Brooklyn,11206,BPL,3,1000991.50784,195972.11204300003
+NYCLIB102,Canarsie,Canarsie,Rockaway Parkway,1580,Brooklyn,11236,BPL,3,1012134.09612,173266.226024
+NYCLIB103,Carroll Gardens,Carroll Gardens,Clinton Street,396,Brooklyn,11231,BPL,3,984799.4149,188189.536072
+NYCLIB104,Brooklyn Central Library,Brooklyn Central Library,Grand Army Plaza,10,Brooklyn,11238,BPL,3,993064.424288,184230.87929199997
+NYCLIB105,Clarendon,Clarendon,Nostrand Avenue,2035,Brooklyn,11210,BPL,3,998784,170898
+NYCLIB106,Clinton Hill,Clinton Hill,Washington Avenue,380,Brooklyn,11238,BPL,3,993670.827931,189708.99792800003
+NYCLIB107,Coney Island,Coney Island,Mermaid Avenue,1901,Brooklyn,11224,BPL,3,988121.893491,149361.441157
+NYCLIB108,Cortelyou,Cortelyou,Cortelyou Road,1305,Brooklyn,11226,BPL,3,993695.61069,172740.223795
+NYCLIB109,Crown Heights,Crown Heights,New York Avenue,560,Brooklyn,11225,BPL,3,998648.613907,180169.748962
+NYCLIB110,Cypress Hills,Cypress Hills,Sutter Avenue,1197,Brooklyn,11208,BPL,3,1019192,184387
+NYCLIB111,DeKalb,DeKalb,Bushwick Avenue,790,Brooklyn,11221,BPL,3,1004105.21815,192425.02399199997
+NYCLIB112,Dyker,Dyker,13th Avenue,8202,Brooklyn,11228,BPL,3,980921.640175,163814.284954
+NYCLIB113,East Flatbush,East Flatbush,Church Avenue,9612,Brooklyn,11212,BPL,3,1007851,178181
+NYCLIB114,Eastern Parkway,Eastern Parkway,Eastern Parkway,1044,Brooklyn,11213,BPL,3,1002656.0419200001,182831.030713
+NYCLIB115,Flatbush,Flatbush,Linden Boulevard,22,Brooklyn,11226,BPL,3,995836.9912500001,176793.02999399998
+NYCLIB116,Flatlands,Flatlands,Flatbush Avenue,2065,Brooklyn,11234,BPL,3,1002790.96816,165081.71581800003
+NYCLIB117,Fort Hamilton,Fort Hamilton,Fourth Avenue,9424,Brooklyn,11209,BPL,3,975540.954742,163839.288185
+NYCLIB118,Gerritsen Beach,Gerritsen Beach,Gerritsen Avenue,2808,Brooklyn,11229,BPL,3,1005375,154738
+NYCLIB119,Gravesend,Gravesend,Avenue X,303,Brooklyn,11223,BPL,3,992079.8111,154428.920851
+NYCLIB120,Greenpoint,Greenpoint,Norman Avenue,107,Brooklyn,11222,BPL,3,997916,203792
+NYCLIB121,Highlawn,Highlawn,West 13th Street,1664,Brooklyn,11223,BPL,3,988069,159947
+NYCLIB122,Homecrest,Homecrest,Coney Island Avenue,2525,Brooklyn,11223,BPL,3,995192.2067779999,156139.708768
+NYCLIB123,Jamaica Bay,Jamaica Bay,Seaview Avenue,9727,Brooklyn,11236,BPL,3,1014990.8006000001,170446.74780300003
+NYCLIB124,Kensington,Kensington,18th Avenue,4207,Brooklyn,11218,BPL,3,991068.171997,169273.970642
+NYCLIB125,Kings Bay,Kings Bay,Nostrand Avenue,3650,Brooklyn,11229,BPL,3,1000600.67398,156005.99381199997
+NYCLIB126,Kings Highway,Kings Highway,Ocean Avenue,2115,Brooklyn,11229,BPL,3,997270.3519000001,161612.833977
+NYCLIB127,Leonard,Leonard,Devoe Street,81,Brooklyn,11211,BPL,3,998683.47309,199280.871173
+NYCLIB128,Macon,Macon,Lewis Avenue,361,Brooklyn,11233,BPL,3,1002331.7997799999,188120.254715
+NYCLIB129,Mapleton,Mapleton,60th Street,1702,Brooklyn,11204,BPL,3,987181.420593,166285.55401599995
+NYCLIB130,Marcy,Marcy,DeKalb Avenue,617,Brooklyn,11216,BPL,3,997759.8486250002,191257.138861
+NYCLIB131,McKinley Park,McKinley Park,Fort Hamilton Parkway,6802,Brooklyn,11219,BPL,3,980964.2551409999,168506.58421499998
+NYCLIB132,Midwood,Midwood,East 16th Street,975,Brooklyn,11230,BPL,3,995266.2617479999,167308.68314900002
+NYCLIB133,Mill Basin,Mill Basin,Ralph Avenue,2385,Brooklyn,11234,BPL,3,1007286.0798999999,165122.07302100002
+NYCLIB134,New Lots,New Lots,New Lots Avenue,665,Brooklyn,11207,BPL,3,1015856.9561300001,181632.442887
+NYCLIB135,"New Utrecht <br> (Temporary Closed, will reopen later this Summer (2016).","New Utrecht <br> (Temporary Closed, will reopen later this Summer (2016).",86th Street,1743,Brooklyn,11214,BPL,3,983312.4569160001,160790.61088300002
+NYCLIB136,Pacific,Pacific,Fourth Avenue,25,Brooklyn,11217,BPL,3,990189.8472290001,188282.473022
+NYCLIB137,Paerdegat,Paerdegat,East 59th Street,850,Brooklyn,11234,BPL,3,1006459.07335,169773.235963
+NYCLIB138,Park Slope,Park Slope,6th Avenue,431,Brooklyn,11215,BPL,3,988839.6943969999,182732.88763399998
+NYCLIB139,Red Hook,Red Hook,Wolcott Street,7,Brooklyn,11231,BPL,3,981381,185285
+NYCLIB140,Rugby,Rugby,Utica Avenue,1000,Brooklyn,11203,BPL,3,1003575.6796299999,175593.560791
+NYCLIB141,Ryder,Ryder,23rd Avenue,5902,Brooklyn,11204,BPL,3,990922.4296260001,163658.927185
+NYCLIB142,Saratoga,Saratoga,Thomas S. Boyland Street,8,Brooklyn,11233,BPL,3,1007787.51197,188782.594926
+NYCLIB143,Sheepshead Bay,Sheepshead Bay,East 14th Street,2636,Brooklyn,11235,BPL,3,996644.9658200002,153144.400024
+NYCLIB144,Spring Creek,Spring Creek,Flatlands Avenue,12143,Brooklyn,11207,BPL,3,1015919.33333,177278.944444
+NYCLIB145,Stone Avenue,Stone Avenue,Mother Gaston Boulevard,581,Brooklyn,11212,BPL,3,1010536.49463,181385.74279800002
+NYCLIB146,Sunset Park,Sunset Park,4th Avenue,5108,Brooklyn,11220,BPL,3,980467.595808,174599.8769
+NYCLIB147,Ulmer Park,Ulmer Park,Bath Avenue,2602,Brooklyn,11214,BPL,3,987408.47821,155207.786621
+NYCLIB148,Walt Whitman,Walt Whitman,Saint Edwards Street,93,Brooklyn,11205,BPL,3,990424.8242530001,192298.55771
+NYCLIB149,Washington Irving,Washington Irving,Irving Avenue,360,Brooklyn,11237,BPL,3,1008595.93079,193404.913391
+NYCLIB150,Williamsburgh,Williamsburgh,Division Avenue,240,Brooklyn,11211,BPL,3,996018.0679870001,196833.15100299998
+NYCLIB151,Windsor Terrace,Windsor Terrace,East 5th Street,160,Brooklyn,11218,BPL,3,990699.3016360002,175634.42401099997
+NYCLIB152,Arverne,Arverne,Beach 54 Street,312,Arverne,11692,QPL,4,1044227.47485,155449.712116
+NYCLIB153,Astoria,Astoria,Astoria Boulevard,14-01,Long Island City,11102,QPL,4,1003987,220682
+NYCLIB154,Auburndale,Auburndale,Francis Lewis Boulevard,25-55,Flushing,11358,QPL,4,1040658,221239
+NYCLIB155,Baisley Park,Baisley Park,Sutphin Boulevard,117-11,Jamaica,11436,QPL,4,1042030.53174,187200.879257
+NYCLIB156,Bay Terrace,Bay Terrace,Bell Boulevard,18-36,Bayside,11360,QPL,4,1046004,224450
+NYCLIB157,Bayside,Bayside,Northern Boulevard,214-20,Bayside,11361,QPL,4,1048420.7807699998,216295.80991199997
+NYCLIB158,Bellerose,Bellerose,Hillside Avenue,250-06,Bellerose,11426,QPL,4,1062650,207242
+NYCLIB159,Briarwood,Briarwood,Main Street,85-12,Briarwood,11435,QPL,4,1034304.6177299999,198012.81301399998
+NYCLIB160,Broad Channel,Broad Channel,Cross Bay Boulevard,16-26,Broad Channel,11693,QPL,4,1034220.2071299999,158190.63084700002
+NYCLIB161,Broadway,Broadway,Broadway,40-20,Long Island City,11103,QPL,4,1006794.3801,215639.846985
+NYCLIB162,Cambria Heights,Cambria Heights,Linden Boulevard,218-13,Cambria Heights,11411,QPL,4,1056025,192853
+NYCLIB163,Queens Central Library,Queens Central Library,Merrick Boulevard,89-11,Jamaica,11432,QPL,4,1041175.06757,197240.470726
+NYCLIB164,Corona,Corona,104 Street,38-23,Corona,11368,QPL,4,1022491.9428600001,212877.757037
+NYCLIB165,Court Square,Court Square,Jackson Avenue,25-01,Long Island City,11101,QPL,4,999650.0416670002,211397.1875
+NYCLIB166,Douglaston/Little Neck,Douglaston/Little Neck,Northern Boulevard,249-01,Little Neck,11363,QPL,4,1056759.56921,219270.349239
+NYCLIB167,East Elmhurst,East Elmhurst,Astoria Boulevard,95-06,East Elmhurst,11369,QPL,4,1019191.60596,217072.82935599997
+NYCLIB168,East Flushing,East Flushing,Northern Boulevard,196-36,Flushing,11358,QPL,4,1044006.96709,215344.594295
+NYCLIB169,Elmhurst <br> (Temporary location due to renovations),Elmhurst <br> (Temporary location due to renovations),51 Avenue,85-08,Elmhurst,11373,QPL,4,1018066.1145799999,208283.9375
+NYCLIB170,Far Rockaway,Far Rockaway,Central Avenue,1637,Far Rockaway,11691,QPL,4,1052981.125,159541.20833300002
+NYCLIB171,Flushing,Flushing,Main Street,41-17,Flushing,11355,QPL,4,1031655.8484200002,215400.53381599998
+NYCLIB172,Forest Hills,Forest Hills,71 Avenue,108-19,Forest Hills,11375,QPL,4,1027764.4480600001,202413.135906
+NYCLIB173,Fresh Meadows,Fresh Meadows,Horace Harding Expressway,193-20,Fresh Meadows,11365,QPL,4,1044581.4669200002,209530.15702400001
+NYCLIB174,Glen Oaks,Glen Oaks,Union Turnpike,256-04,Glen Oaks,11004,QPL,4,1063264.07861,210891.570435
+NYCLIB175,Glendale,Glendale,73 Place,78-60,Glendale,11385,QPL,4,1018702.3626100001,195271.656189
+NYCLIB176,Hillcrest,Hillcrest,Union Turnpike,187-05,Flushing,11366,QPL,4,1044693,205039
+NYCLIB177,Hollis,Hollis,Hillside Avenue,202-05,Hollis,11423,QPL,4,1050134,201742
+NYCLIB178,Howard Beach,Howard Beach,156 Avenue,92-06,Howard Beach,11414,QPL,4,1028139,181160
+NYCLIB179,Jackson Heights,Jackson Heights,81 Street,35-51,Jackson Heights,11372,QPL,4,1016094.0691699999,212614.21721000003
+NYCLIB180,Kew Gardens Hills <br> (Temporary location),Kew Gardens Hills <br> (Temporary location),Main Street,71-34,Flushing,11367,QPL,4,1033511.26984,204169.27063
+NYCLIB181,Langston Hughes,Langston Hughes,Northern Boulevard,100-01,Corona,11368,QPL,4,1020764.20563,215310.013428
+NYCLIB182,Laurelton,Laurelton,225 Street,134-26,Laurelton,11413,QPL,4,1054794.1253,186010.952175
+NYCLIB183,Lefferts,Lefferts,Lefferts Boulevard,103-34,Richmond Hill,11419,QPL,4,1032830.87264,189583.852838
+NYCLIB184,Lefrak City,Lefrak City,57 Avenue,98-30,Corona,11368,QPL,4,1022588.6031,207974.01684500003
+NYCLIB185,Long Island City,Long Island City,21 Street,37-44,Long Island City,11101,QPL,4,1001063.7747599998,215370.753035
+NYCLIB186,Maspeth,Maspeth,Grand Avenue,69-70,Maspeth,11378,QPL,4,1013878.04539,204158.650131
+NYCLIB187,McGoldrick,McGoldrick,Roosevelt Avenue,155-06,Flushing,11354,QPL,4,1036929.0652300001,217588.755817
+NYCLIB188,Middle Village,Middle Village,Metropolitan Avenue,72-31,Middle Village,11379,QPL,4,1017279,199040
+NYCLIB189,Mitchell-Linden,Mitchell-Linden,Union Street,31-32,Flushing,11354,QPL,4,1032186.1111099999,219543.125
+NYCLIB190,North Forest Park,North Forest Park,Metropolitan Avenue,98-27,Forest Hills,11375,QPL,4,1024817,198404
+NYCLIB191,North Hills,North Hills,Marathon Parkway,57-04,Little Neck,11362,QPL,4,1058540,216007
+NYCLIB192,Ozone Park <br> (Closed for renovations),Ozone Park <br> (Closed for renovations),Rockaway Boulevard,92-24,Ozone Park,11417,QPL,4,1026828,187372
+NYCLIB193,Peninsula,Peninsula,Rockaway Beach Boulevard,92-25,Rockaway Beach,11693,QPL,4,1035338.9184000001,152776.168396
+NYCLIB194,Pomonok,Pomonok,Jewel Avenue,158-21,Flushing,11365,QPL,4,1036881,206358
+NYCLIB195,Poppenhusen,Poppenhusen,14 Avenue,121-23,College Point,11356,QPL,4,1026891,225753
+NYCLIB196,Queens Library for Teens,Queens Library for Teens,Cornaga Avenue,2002,Far Rockaway,11691,QPL,4,1052696.26042,158839.6875
+NYCLIB197,Queens Village,Queens Village,217 Street,94-11,Queens Village,11428,QPL,4,1056585,201659
+NYCLIB198,Queensboro Hill,Queensboro Hill,Main Street,60-05,Flushing,11355,QPL,4,1032695.76793,209994.74902400002
+NYCLIB199,Queensbridge <br> Now a Family Literacy Center,Queensbridge <br> Now a Family Literacy Center,41 Avenue,10-43,LIC,11101,QPL,4,999698.1874999999,214375.32291699998
+NYCLIB200,Ravenswood <br> Now a Family Literacy Center,Ravenswood <br> Now a Family Literacy Center,21 Street,35-32,LIC,11106,QPL,4,1001867.90839,216419.335205
+NYCLIB201,Rego Park,Rego Park,63 Drive,91-41,Rego Park,11374,QPL,4,1021805.35926,204286.637736
+NYCLIB202,Richmond Hill,Richmond Hill,Hillside Avenue,118-14,Richmond Hill,11418,QPL,4,1030931.76581,194640.643799
+NYCLIB203,Ridgewood,Ridgewood,Madison Street,20-12,Ridgewood,11385,QPL,4,1011258.2803999999,196224.669983
+NYCLIB204,Rochdale Village,Rochdale Village,137 Avenue,169-09,Jamaica,11434,QPL,4,1047886.74312,184506.31574900003
+NYCLIB205,Rosedale,Rosedale,243 Street,144-20,Rosedale,11422,QPL,4,1056410.8927400003,179826.060673
+NYCLIB206,Seaside,Seaside,Rockaway Beach Boulevard,116-15,Rockaway Park,11694,QPL,4,1029321,150411
+NYCLIB207,South Hollis,South Hollis,Hollis Avenue,204-01,South Hollis,11412,QPL,4,1052510,196953
+NYCLIB208,South Jamaica,South Jamaica,Guy R. Brewer Boulevard,108-41,Jamaica,11433,QPL,4,1042424,192776
+NYCLIB209,South Ozone Park,South Ozone Park,Rockaway Boulevard,128-16,South Ozone Park,11420,QPL,4,1037158,185176
+NYCLIB210,St.Albans,St.Albans,Linden Boulevard,191-05,St. Albans,11412,QPL,4,1050784.5875900001,191663.97522000002
+NYCLIB211,Steinway,Steinway,31 Street,21-45,Long Island City,11105,QPL,4,1009327.0145899999,222308.83343499998
+NYCLIB212,Sunnyside,Sunnyside,Greenpoint Avenue,43-06,Long Island City,11104,QPL,4,1005956.64264,209196.751038
+NYCLIB213,Whitestone,Whitestone,14 Road,151-10,Whitestone,11357,QPL,4,1036669,226620
+NYCLIB214,Windsor Park,Windsor Park,Bell Boulevard,79-50,Bayside,11364,QPL,4,1051976.8900100002,206970.9776
+NYCLIB215,Woodhaven,Woodhaven,Forest Parkway,85-41,Woodhaven,11421,QPL,4,1022668.3378300001,192343.257019
+NYCLIB216,Woodside,Woodside,Skillman Avenue,54-22,Woodside,11377,QPL,4,1009245.4509800001,210837.593138

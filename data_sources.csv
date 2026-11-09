@@ -1,0 +1,3 @@
+dataset,publisher,source_url,downloaded_file,download_date,coordinate_information,notes
+NYC Library Locations,NYC OpenData,https://data.cityofnewyork.us/Business/LIBRARY/feuq-due4,LIBRARY_20261108.csv,2026-11-08,"Longitude and latitude, WGS 84 (EPSG:4326)",Supplied NYC library CSV.
+NYC Borough Boundaries,NYC OpenData,https://data.cityofnewyork.us/,Borough_Boundaries_20261108.csv,2026-11-08,"Longitude and latitude, WGS 84 (EPSG:4326)",Supplied borough boundary CSV. Replace portal URL with exact dataset page.

@@ -1,0 +1,556 @@
+ 
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(readr)
+library(sf)
+
+vehicles <- ggplot2::mpg
+gems <- ggplot2::diamonds
+
+
+# part 1
+
+p_a <- ggplot(vehicles, aes(x = displ, y = hwy)) +
+  geom_point(aes(color = drv)) +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  facet_wrap(~drv) +
+  labs(title = "Engine Size and Highway Fuel Economy by Drive Type",
+       x = "Engine displacement (litres)",
+       y = "Highway fuel economy (mpg)",
+       color = "Drive type") +
+  theme_bw()
+
+print(p_a)
+
+ggsave("p_a.png", p_a, width = 9, height = 4.5)
+
+# Each panel contains one drive type. geom_smooth() fits a separate linear model in each panel, so there are three lines.
+
+
+# part b
+
+p_b_count <- ggplot(vehicles, aes(x = drv, fill = factor(cyl))) +
+  geom_bar() +
+  labs(title = "Number of Vehicles by Drive Type and Cylinder Count",
+       x = "Drive type",
+       y = "Number of vehicles",
+       fill = "Cylinders") +
+  theme_bw()
+
+print(p_b_count)
+
+ggsave("p_b_count.png", p_b_count, width = 6, height = 5)
+
+
+# Part B: Proportion plot
+
+p_b_prop <- ggplot(vehicles, aes(x = drv, fill = factor(cyl))) +
+  geom_bar(position = "fill") +
+  labs(title = "Proportion of Cylinder Counts Within Drive Type",
+       x = "Drive type",
+       y = "Proportion",
+       fill = "Cylinders") +
+  theme_bw()
+
+print(p_b_prop)
+
+ggsave("p_b_prop.png", p_b_prop, width = 6, height = 5)
+
+# Each bar has a total height of 1. The plot shows proportions within each drive type, not the total number of vehicles.
+
+
+# part c
+
+# Use the same smaller table for both histograms.
+
+gems_small <- gems %>%
+  filter(carat <= 3)
+
+records_retained <- nrow(gems_small)
+records_excluded <- nrow(gems) - records_retained
+
+cat("Records retained:", records_retained, "\n")
+cat("Records excluded:", records_excluded, "\n")
+
+
+# Fine histogram
+
+p_fine <- ggplot(gems_small, aes(x = carat)) +
+  geom_histogram(binwidth = 0.01,
+                 boundary = 0,
+                 closed = "right") +
+  coord_cartesian(xlim = c(0, 3)) +
+  labs(title = "Diamond Carat Distribution (Bin Width = 0.01)",
+       x = "Carat",
+       y = "Count") +
+  theme_bw()
+
+print(p_fine)
+
+ggsave("p_fine.png", p_fine, width = 7, height = 4.5)
+
+
+# Coarse histogram
+
+p_coarse <- ggplot(gems_small, aes(x = carat)) +
+  geom_histogram(binwidth = 0.5,
+                 boundary = 0,
+                 closed = "right") +
+  coord_cartesian(xlim = c(0, 3)) +
+  labs(title = "Diamond Carat Distribution (Bin Width = 0.5)",
+       x = "Carat",
+       y = "Count") +
+  theme_bw()
+
+print(p_coarse)
+
+ggsave("p_coarse.png", p_coarse, width = 7, height = 4.5)
+
+
+# Exact carat values from the original diamonds dataset
+
+exact_carat_counts <- gems %>%
+  filter(carat %in% c(0.99, 1.00)) %>%
+  count(carat, name = "number_of_diamonds")
+
+print(exact_carat_counts)
+
+# Narrow bins make spikes at particular carat values easier
+# to see. Wider bins combine nearby values, so smaller peaks
+# are less clear.
+
+
+#Problem 2
+
+
+library_raw <- read_csv("LIBRARY_20261108.csv",
+                        show_col_types = FALSE)
+
+records_before <- nrow(library_raw)
+
+# Convert the coordinate column into spatial points.
+# Coordinates are longitude and latitude (WGS 84).
+
+library_points <- st_as_sf(library_raw,
+                           wkt = "the_geom",
+                           crs = 4326)
+
+
+# Check coordinates and geometries.
+
+empty_geometry <- st_is_empty(library_points)
+
+coordinate_values <- st_coordinates(library_points)
+
+bad_coordinates <- is.na(coordinate_values[, 1]) |
+  is.na(coordinate_values[, 2]) |
+  coordinate_values[, 1] < -180 |
+  coordinate_values[, 1] > 180 |
+  coordinate_values[, 2] < -90 |
+  coordinate_values[, 2] > 90
+
+missing_name <- is.na(library_points$NAME) |
+  library_points$NAME == ""
+
+remove_record <- bad_coordinates |
+  missing_name |
+  empty_geometry
+
+library_clean <- library_points[!remove_record, ]
+
+
+# Give each library a unique ID.
+
+library_clean$site_id <- paste0("NYCLIB",
+                                seq_len(nrow(library_clean)))
+
+library_clean$facility_name <- library_clean$NAME
+
+records_after <- nrow(library_clean)
+records_removed <- records_before - records_after
+
+
+# Display cleaning information.
+
+cat("Records before cleaning:", records_before, "\n")
+cat("Records after cleaning:", records_after, "\n")
+cat("Records removed:", records_removed, "\n")
+cat("Invalid coordinates:", sum(bad_coordinates), "\n")
+cat("Missing names:", sum(missing_name), "\n")
+cat("Empty geometries:", sum(empty_geometry), "\n")
+
+# Duplicate coordinates are kept, as required.
+
+cat("Duplicate coordinate pairs retained:",
+    sum(duplicated(st_coordinates(library_clean))), "\n")
+
+
+
+cleaned_locations <- library_clean %>%
+  st_drop_geometry() %>%
+  select(site_id, facility_name, NAME, STREETNAME, HOUSENUM,
+         CITY, ZIP, SYSTEM, BOROCODE, X, Y)
+
+write_csv(cleaned_locations, "cleaned_locations.csv")
+
+
+# Transform points to a projected coordinate system.
+# EPSG:32618 uses meters.
+
+sites_m <- st_transform(library_clean, 32618)
+
+cat("Projected CRS:", st_crs(sites_m)$input, "\n")
+cat("Coordinate units: meters\n")
+
+
+# Map library locations.
+
+p_sites <- ggplot() +
+  geom_sf(data = sites_m,
+          color = "darkblue",
+          size = 1.5) +
+  labs(title = "Public Library Locations in New York City",
+       subtitle = paste("Retained facilities:", nrow(sites_m)),
+       caption = "Source: supplied NYC library CSV.",
+       x = "Easting (meters)",
+       y = "Northing (meters)") +
+  theme_bw()
+
+print(p_sites)
+
+ggsave("p_sites.png", p_sites, width = 7, height = 7)
+
+
+# Create 500-meter and 1,000-meter buffers.
+
+buffer_500m <- st_union(st_buffer(sites_m, dist = 500))
+
+buffer_1000m <- st_union(st_buffer(sites_m, dist = 1000))
+
+
+# Convert buffers into spatial data frames.
+
+buffer_500m_sf <- st_sf(
+  radius_m = 500,
+  geometry = buffer_500m
+)
+
+buffer_1000m_sf <- st_sf(
+  radius_m = 1000,
+  geometry = buffer_1000m
+)
+
+
+# Calculate combined buffer areas in square kilometers.
+
+area_500m_km2 <- as.numeric(st_area(buffer_500m)) / 1000000
+
+area_1000m_km2 <- as.numeric(st_area(buffer_1000m)) / 1000000
+
+
+# Create the buffer summary table.
+
+buffer_summary <- data.frame(
+  radius_m = c(500, 1000),
+  union_area_km2 = c(area_500m_km2, area_1000m_km2)
+)
+
+print(buffer_summary)
+
+write_csv(buffer_summary, "buffer_summary.csv")
+
+
+
+stopifnot(area_1000m_km2 >= area_500m_km2)
+
+
+# Map the combined 500-meter buffer.
+
+p_buffers <- ggplot() +
+  geom_sf(data = buffer_500m_sf,
+          aes(fill = "500-meter buffer"),
+          color = "darkorange",
+          alpha = 0.4) +
+  geom_sf(data = sites_m,
+          color = "darkblue",
+          size = 1.2) +
+  scale_fill_manual(
+    name = "Layer",
+    values = c("500-meter buffer" = "orange")
+  ) +
+  labs(title = "Combined 500-Meter Buffer Around NYC Libraries",
+       subtitle = "Overlapping buffer areas are counted once",
+       caption = "Source: supplied NYC library CSV. Buffers are not clipped to a study boundary.",
+       x = "Easting (meters)",
+       y = "Northing (meters)") +
+  theme_bw()
+
+print(p_buffers)
+
+ggsave("p_buffers.png", p_buffers, width = 7, height = 7)
+
+
+# Save spatial outputs in a GeoPackage.
+
+if (file.exists("problem2_spatial_outputs.gpkg")) {
+  file.remove("problem2_spatial_outputs.gpkg")
+}
+
+st_write(sites_m,
+         "problem2_spatial_outputs.gpkg",
+         layer = "sites_m",
+         quiet = TRUE)
+
+st_write(buffer_500m_sf,
+         "problem2_spatial_outputs.gpkg",
+         layer = "buffer_500m",
+         append = TRUE,
+         quiet = TRUE)
+
+st_write(buffer_1000m_sf,
+         "problem2_spatial_outputs.gpkg",
+         layer = "buffer_1000m",
+         append = TRUE,
+         quiet = TRUE)
+
+
+# Problem 3
+
+# Read the borough boundary CSV.
+
+borough_raw <- read_csv("Borough_Boundaries_20261108.csv",
+                        show_col_types = FALSE)
+
+# Convert borough coordinates into spatial polygons.
+
+boroughs <- st_as_sf(borough_raw,
+                     wkt = "the_geom",
+                     crs = 4326)
+
+
+
+boroughs$district_id <- paste0("BORO", boroughs$BoroCode)
+
+boroughs$district_name <- boroughs$BoroName
+
+
+# Repair invalid shapes and remove empty shapes.
+
+boroughs <- st_make_valid(boroughs)
+
+boroughs <- boroughs[!st_is_empty(boroughs), ]
+
+
+# Use the same projected CRS as the library points.
+
+boroughs_m <- st_transform(boroughs, st_crs(sites_m))
+
+
+# Calculate area in square kilometers.
+
+boroughs_m$area_km2 <- as.numeric(st_area(boroughs_m)) / 1000000
+
+stopifnot(all(boroughs_m$area_km2 > 0))
+
+
+# Check borough IDs.
+
+cat("Missing borough IDs:",
+    sum(is.na(boroughs_m$district_id) |
+          boroughs_m$district_id == ""), "\n")
+
+cat("Duplicate borough IDs:",
+    sum(duplicated(boroughs_m$district_id)), "\n")
+
+
+# Find how many boroughs match each library.
+
+matches <- st_intersects(sites_m, boroughs_m)
+
+number_of_matches <- lengths(matches)
+
+
+# Create the site matching audit.
+
+site_match_audit <- data.frame(
+  site_id = sites_m$site_id,
+  number_of_area_matches = number_of_matches
+)
+
+write_csv(site_match_audit, "site_match_audit.csv")
+
+
+# Report the matching results.
+
+cat("Sites matching zero areas:",
+    sum(number_of_matches == 0), "\n")
+
+cat("Sites matching one area:",
+    sum(number_of_matches == 1), "\n")
+
+cat("Sites matching multiple areas:",
+    sum(number_of_matches > 1), "\n")
+
+
+# Identify sites without exactly one match.
+
+sites_not_exactly_one <- site_match_audit %>%
+  filter(number_of_area_matches != 1)
+
+print(sites_not_exactly_one)
+
+
+# Count only sites matching exactly one borough.
+
+assigned_sites <- which(number_of_matches == 1)
+
+assigned_borough <- sapply(assigned_sites, function(i) {
+  matches[[i]][1]
+})
+
+
+# Keep all boroughs, including boroughs with zero sites.
+
+borough_counts <- tabulate(assigned_borough,
+                           nbins = nrow(boroughs_m))
+
+
+# Create the district summary table.
+
+district_counts <- data.frame(
+  district_id = boroughs_m$district_id,
+  district_name = boroughs_m$district_name,
+  n_sites = borough_counts,
+  area_km2 = boroughs_m$area_km2
+)
+
+district_counts$sites_per_km2 <-
+  district_counts$n_sites / district_counts$area_km2
+
+print(district_counts)
+
+write_csv(district_counts, "district_counts.csv")
+
+
+# Check that all assigned sites are counted once.
+
+stopifnot(sum(district_counts$n_sites) == length(assigned_sites))
+
+stopifnot(all(district_counts$area_km2 > 0))
+
+
+# Map library points over borough boundaries.
+
+p_borough_sites <- ggplot() +
+  geom_sf(data = boroughs_m,
+          fill = "grey95",
+          color = "grey40") +
+  geom_sf(data = sites_m,
+          color = "darkblue",
+          size = 1) +
+  labs(title = "NYC Libraries and Borough Boundaries",
+       subtitle = paste("Sites not assigned exactly once:",
+                        length(sites_m) - length(assigned_sites)),
+       caption = "Sources: supplied NYC library and borough CSV files.",
+       x = "Easting (meters)",
+       y = "Northing (meters)") +
+  theme_bw()
+
+print(p_borough_sites)
+
+ggsave("p_borough_sites.png", p_borough_sites,
+       width = 8, height = 7)
+
+
+# Add summary values to the borough polygons.
+
+borough_map <- boroughs_m %>%
+  left_join(district_counts,
+            by = c("district_id", "district_name", "area_km2"))
+
+
+# Map the number of libraries in each borough.
+
+p_count <- ggplot() +
+  geom_sf(data = borough_map,
+          aes(fill = n_sites),
+          color = "grey40") +
+  scale_fill_gradient(
+    name = "Number of libraries",
+    na.value = "grey80"
+  ) +
+  labs(title = "Number of Public Libraries by NYC Borough",
+       subtitle = "Only sites matching exactly one borough are counted",
+       caption = "Sources: supplied NYC library and borough CSV files.",
+       x = "Easting (meters)",
+       y = "Northing (meters)") +
+  theme_bw()
+
+print(p_count)
+
+ggsave("p_count.png", p_count, width = 8, height = 7)
+
+
+# Map library density in each borough.
+
+p_density <- ggplot() +
+  geom_sf(data = borough_map,
+          aes(fill = sites_per_km2),
+          color = "grey40") +
+  scale_fill_gradient(
+    name = "Libraries per square kilometer",
+    na.value = "grey80"
+  ) +
+  labs(title = "Public Library Density by NYC Borough",
+       subtitle = "Number of libraries divided by borough area",
+       caption = "Sources: supplied NYC library and borough CSV files.",
+       x = "Easting (meters)",
+       y = "Northing (meters)") +
+  theme_bw()
+
+print(p_density)
+
+ggsave("p_density.png", p_density, width = 8, height = 7)
+
+
+# Interpretation:
+# The count map shows the total number of libraries in each borough. The density map divides the number of libraries by borough area.
+# A borough can have more libraries but a lower density if it covers a much larger area. Sites that do not match exactly one borough are excluded from the counts and reported in the audit file.
+
+
+# Data Sources
+data_sources <- data.frame(
+  dataset = c("NYC Library Locations",
+              "NYC Borough Boundaries"),
+  
+  publisher = c("NYC OpenData",
+                "NYC OpenData"),
+  
+  source_url = c(
+    "https://data.cityofnewyork.us/Business/LIBRARY/feuq-due4",
+    "https://data.cityofnewyork.us/"
+  ),
+  
+  downloaded_file = c(
+    "LIBRARY_20261108.csv",
+    "Borough_Boundaries_20261108.csv"
+  ),
+  
+  download_date = c("2026-11-08", "2026-11-08"),
+  
+  coordinate_information = c(
+    "Longitude and latitude, WGS 84 (EPSG:4326)",
+    "Longitude and latitude, WGS 84 (EPSG:4326)"
+  ),
+  
+  notes = c(
+    "Supplied NYC library CSV.",
+    "Supplied borough boundary CSV. Replace portal URL with exact dataset page."
+  )
+)
+
+write_csv(data_sources, "data_sources.csv")
+)
+ 
+
